@@ -16,11 +16,13 @@ public class Hello {
     System.out.println(age);
     System.out.println(age > 25);
     
+    
     System.out.println("你多重?");
     line = scanner.nextLine();
     int weight = Integer.parseInt(line);
     System.out.println(weight);
     System.out.println(weight < 50);
+    
 	}
 
 }
