@@ -12,9 +12,10 @@ public class question2 {
 		Scanner scanner = new Scanner(System.in);
 		String line = scanner.nextLine();
 		int n = Integer.parseInt(line);
-		for (int i = 1; i <= n; i++) {
-			System.out.println("*");
-		}
+		for (int a = 1; a <= n;a++){
+		for (int i = 1; i <= a;i++) {
+			System.out.print("*");
+		}System.out.println("");
 	}
-
+	}
 }
