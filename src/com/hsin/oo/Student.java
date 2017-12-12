@@ -5,12 +5,16 @@ public class Student {
 	int math;
 	int chinese;
 	String name;
+// 屬性 instance variable
+	public Student(String name,int english,int math,int chinese){
+		this.english = english;
+	    this.math = math;
+		this.chinese = chinese;
+		this.name = name;
+	}
 	
-	public Student(String n,int e,int m,int c){
-		english = e;
-		math = m;
-		chinese = c;
-		name = n;
+	public Student(String name){
+		this.name = name;
 	}
 
 	public void print() {
