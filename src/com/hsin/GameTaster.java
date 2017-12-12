@@ -13,6 +13,7 @@ public class GameTaster {
 		int col = 5;
 		int hp = 100;
 		while (hp >= 0) {
+			System.out.println("目前位置:" + pos+" "+"HP:" + hp);
 			System.out.print("請使用者輸入方向:");
 			Scanner scanner = new Scanner(System.in);
 			String line = scanner.nextLine();
@@ -27,8 +28,7 @@ public class GameTaster {
 					System.out.println("撞牆");
 					hp = hp - 30;
 				}
-				System.out.println("地點:" + pos);
-				System.out.println("hp:" + hp);
+				
 					break;
 				
 			case 4:
@@ -40,8 +40,6 @@ public class GameTaster {
 					System.out.println("撞牆");
 					hp = hp - 30;
 				}
-				System.out.println("地點:" + pos);
-				System.out.println("hp:" + hp);
 				break;
 			case 6:
 				if(pos % col != col - 1){
@@ -51,9 +49,7 @@ public class GameTaster {
 				}else{
 					System.out.println("撞牆");
 				hp = hp - 30;
-				}	
-				System.out.println("地點:" + pos);
-				System.out.println("hp:" + hp);
+				}
 				break;
 			case 2:
 				if(pos/col < row-1){
@@ -64,8 +60,6 @@ public class GameTaster {
 					System.out.println("撞牆");
 					hp = hp - 30;
 				}
-				System.out.println("地點:" + pos);
-				System.out.println("hp:" + hp);
 				break;
 			case 0:
 				System.out.println("Bye");
@@ -75,8 +69,7 @@ public class GameTaster {
 			}
 		}
 		System.out.println("遊戲結束");
-		System.out.println("地點:" + pos);
-		System.out.println("hp:" + hp);
+		System.out.println("目前位置:" + pos+" "+"HP:" + hp);
 		// if (n == 0) {
 		// break;
 	}
