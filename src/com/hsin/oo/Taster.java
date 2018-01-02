@@ -10,6 +10,7 @@ public class Taster {
 		// stu.math = 66;
 		// stu.chinese = 77;
     	stu1.pass = 50;
+    	stu1.math=66;
     	stu1.print();
     	stu2.print();
     	Student.method();

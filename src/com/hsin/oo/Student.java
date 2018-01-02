@@ -4,13 +4,15 @@ import java.lang.Thread.State;
 
 public class Student {
 	int english;
-	int math;
+//	private 限制東西只能用在自己
+	protected int math;
+//	可以用在繼承跟同package的東西上
 	int chinese;
 	String name;
 	static int pass = 60;
 //	static 類別層級的變數 只取static層級用
 // 屬性 instance variable
-	
+// 有加public才能用在別的package
 	public Student(){
 		
 	}
