@@ -9,7 +9,8 @@ public class GoldenCustomer extends Customer {
 		@Override
 		 public void print(){
 	    	int total = (int)(amount*(1-discount));
-	    	System.out.print(amount+"\t"+total+"\t"+(int)(amount*0.1f));
+	    	int returnMoney = (int)(amount*0.1f);
+	    	System.out.println(amount+"\t"+total+"\t"+returnMoney);
 	    }
 	
 	}
