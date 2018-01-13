@@ -2,6 +2,8 @@ package com.hsin.oo;
 
 import java.util.Scanner;
 
+import com.kao.Drink;
+
 public class VendingMechine {
 
 	public static void main(String[] args) {
