@@ -2,8 +2,6 @@ package com.hsin.oo;
 
 import java.util.Scanner;
 
-import com.kao.Drink;
-
 public class VendingMechine {
 
 	public static void main(String[] args) {
@@ -16,12 +14,12 @@ public class VendingMechine {
 //		drinks[2]  = new Drink("c",30);
 		int sum = 0;
 		for(int i=1;i>=1;i++) {
-		System.out.println("投入金額:");
+		System.out.println("������:");
 		Scanner scanner = new Scanner(System.in);
 		String line = scanner.nextLine();
 		int n = Integer.parseInt(line);
 		sum = sum + n;
-		System.out.println("已投入金額:"+sum);
+		System.out.println("撌脫�����:"+sum);
 		if(sum>100){
 			break;
 		}

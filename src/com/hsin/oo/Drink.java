@@ -1,4 +1,4 @@
-package com.kao;
+package com.hsin.oo;
 
 import java.util.Scanner;
 

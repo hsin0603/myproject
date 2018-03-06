@@ -2,12 +2,14 @@ package com.kao;
 
 import java.util.Scanner;
 
+import com.hsin.oo.Drink;
+
 public class Tester {
 
 	public static void main(String[] args) {
 		int price = 0;
        for(int i=0;i>=0;i++){	
-		Drink d1 =new Drink();
+		Drink d1 =new Drink(null, i);
 		d1.printMoney();
 		System.out.println(price);
 		d1.print();
