@@ -16,7 +16,7 @@ public class Ticket {
 	}
 
 	public void print() {
-		System.out.println(date + "\t" + time + "\t" + start + "\t" + end + "\t" + money);
+		System.out.println(date + "\t" + time + "\t" + start + "\t" + end + "\t" + money+"(一般票)");
 	}
 
 }
