@@ -4,6 +4,7 @@ public class GoBackTicket extends Ticket {
 	String backdate;
 	String backtime;
 	public GoBackTicket (String date, String time,String backdate,String backtime ,String start, String end, int money) {
+    super(backdate, backtime, start, end, money);
 	this.backdate = backdate;
 	this.backtime = backtime;
 	}
