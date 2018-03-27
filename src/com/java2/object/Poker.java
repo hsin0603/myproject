@@ -24,7 +24,10 @@ public class Poker {
    public void show(){
 	   for(int i = 0;i<cards.length;i++){
 		   int c = cards[i];
-		   System.out.print(((c%13)+1)+""+(flowers.charAt(c/13)+" "));
+		   System.out.print((c%13)+1+""+(flowers.charAt(c/13)+" "));
+		   if((i%13)==0){
+			   System.out.println();
+		   }
 	   }
 	   
    }
