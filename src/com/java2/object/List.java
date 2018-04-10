@@ -12,6 +12,8 @@ public class List {
 		System.out.println("removing number:" + cards.remove(0));
 		System.out.println(cards.size());
 		System.out.println(cards.get(1));
+		cards.set(1,5);
+		System.out.println(cards.get(1));
 
 	}
 
