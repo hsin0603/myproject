@@ -19,9 +19,7 @@ import com.hsin.sogo.SilverCustomer;
 public class Sogo {
 	Scanner scanner = new Scanner(System.in);
 
-	public static void main(String[] args) {
-		Sogo sogo = new Sogo();
-		sogo.start();
+	public Sogo() {
 	}
 
 	public void start() {
@@ -29,14 +27,13 @@ public class Sogo {
 		while (function != 3) {
 			showFounction();
 			function = scanner.nextInt();
-			Object list;
 
 			switch (function) {
 			case 1:
 				inputSales();
 				break;
 			case 2:
-				ArrayList<Sales> list1 = new ArrayList<>();
+				List<Sales> list = new ArrayList<>();
 				FileInputStream fis;
 				try {
 					fis = new FileInputStream("sales.txt");
@@ -49,9 +46,9 @@ public class Sogo {
 							int type = Integer.parseInt(token[0]);
 							int amount = Integer.parseInt(token[1]);
 							Sales sales = new Sales(type, amount);
-
+                            list.add(sales);
 						} catch (NumberFormatException e) {
-							System.out.println("è³‡æ–™æ ¼æ˜¯éŒ¯èª¤");
+							System.out.println("¸ê®Æ®æ¦¡¿ù»~");
 							return;
 						}
 						line = in.readLine();
@@ -64,7 +61,7 @@ public class Sogo {
 					e.printStackTrace();
 				}
 //report
-				for (Sales sales : list1) {
+				for (Sales sales : list) {
 					Customer customer = null;
 					switch (sales.type) {
 					case 1:
@@ -91,9 +88,9 @@ public class Sogo {
 		try {
 			FileOutputStream fos = new FileOutputStream("sales.txt", true);
 			PrintStream out = new PrintStream(fos);
-			System.out.print("è«‹è¼¸å…¥æœƒå“¡ç­‰ç´š:");
+			System.out.print("½Ğ¿é¤J·|­ûµ¥¯Å:");
 			int type = scanner.nextInt();
-			System.out.print("è«‹è¼¸å…¥éŠ·å”®é‡‘é¡:");
+			System.out.print("½Ğ¿é¤J¾P°âª÷ÃB:");
 			int amount = scanner.nextInt();
 			out.println(type + "\t" + amount);
 			out.flush();
@@ -106,9 +103,14 @@ public class Sogo {
 	}
 
 	public void showFounction() {
-		System.out.println("è«‹è¼¸å…¥åŠŸèƒ½(1~3):");
-		System.out.println("1)è¼¸å…¥éŠ·å”®ç´€éŒ„");
-		System.out.println("2)å°å‡ºéŠ·å”®å ±è¡¨");
-		System.out.println("3)çµæŸç¨‹å¼");
+		System.out.println("½Ğ¿é¤J¥\¯à(1~3):");
+		System.out.println("1)¿é¤J¾P°â¬ö¿ı");
+		System.out.println("2)¦L¥X¾P°â³øªí");
+		System.out.println("3)µ²§ôµ{¦¡");
+	}
+	
+	public static void main(String[] args) {
+		Sogo sogo = new Sogo();
+		sogo.start();
 	}
 }

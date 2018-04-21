@@ -9,9 +9,7 @@ public class SimpleWriteTester {
 		PrintStream out = new PrintStream("data.txt");
 		out.println("Amy Weng\t1\t2000");
 		out.flush();
-//		確認緩衝資料送出去
 		out.close();
-//		關閉資料流
 
 	}
 
