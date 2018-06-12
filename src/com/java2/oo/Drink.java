@@ -16,19 +16,19 @@ public class Drink {
 	public void setId(int id) {
         this.id = id ;
 	}
-	public void getId(){
-		return;
+	public int getId(){
+		return id;
 	}
 	public void setName(String name) {
         this.name = name ;
 	}
-	public void getName(){
-		return;
+	public String getName(){
+		return name;
 	}
 	public void setPrice(int price) {
         this.price = price ;
 	}
-	public void getPrice(){
-		return;
+	public int getPrice(){
+		return price;
 	}
 }

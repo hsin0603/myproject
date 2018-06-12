@@ -12,11 +12,39 @@
 
 package com.java2.oo;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class BingoMain {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+List<Integer> numbers = new ArrayList<>();
+	int count = 25;
+	int row = 5;
+	int col = 5;
+	public BingoMain(int count){
+		for(int i = 0;i<count ;i++){
+			numbers.add(i+1);
+		}
+		Collections.shuffle(numbers);
+	} 
+public void print(){
+	for (int i=0;i<count ;i++){
+		int n = numbers.get(i);
+		if(n<10){System.out.print(" ");}
+		System.out.print(n<10? " ":" ");
+		System.out.print(n);
+		if((i+1)%5==0){
+			System.out.println();
+		}
 	}
-
+}
+	
+	public static void main(String[] args) {
+		BingoMain bm = new BingoMain(25);
+		bm.print();
+	}
 }

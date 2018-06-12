@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.List;
+
 
 public class VendingMain {
 
@@ -15,7 +15,8 @@ public class VendingMain {
 			fr = new FileReader("vending.txt");
 			BufferedReader in = new BufferedReader(fr);
 			String line = in.readLine();
-			String[] token = line.split(",");
+			String[] tokens = line.split(",");
+			int count = Integer.parseInt(tokens[0]);
 			for(int i =0;i< count ;i++){
 				String name = tokens[i*2+1];
 				int price = Integer.parseInt(tokens[i*2+2]);
