@@ -1,6 +1,6 @@
 package com.java2.schedule;
 
-public class Courses {
+public class Course {
 	String id;
 	String name;
 	int weekday;
@@ -8,7 +8,7 @@ public class Courses {
 	int hour;
 
 	
-	public Courses(String id, String name, int weekday, int time, int hour) {
+	public Course(String id, String name, int weekday, int time, int hour) {
 		super();
 		this.id = id;
 		this.name = name;
