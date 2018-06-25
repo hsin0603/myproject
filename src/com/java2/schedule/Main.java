@@ -24,7 +24,7 @@ import com.java2.oo.Drink;
 [有課: C004 English 到16時]
 */
 public class Main {
-	List<Course> courses = new ArrayList<>();
+	
 
 	public Main() {
 		readCourses();
@@ -42,7 +42,7 @@ public class Main {
 			int w = scanner.nextInt();
 			System.out.println("請輸入時(0-24):");
 			int t = scanner.nextInt();
-			for (int i = 0; i < 5; i++) {
+			while (true) {
 				line = in.readLine();
 				String[] tokens = line.split(",");
 				String id = tokens[0];
@@ -54,12 +54,13 @@ public class Main {
 				if (c.weekday == w) {
 					if (c.time <= t && t <= (c.time + c.hour)) {
 						System.out.println("[有課:" + id + " " + name + " 到" + (time + hour) + "時]");
-					    break;
+						break;
 					} else {
 						System.out.println("[有空檔]");
 						break;
 					}
-				}else {}
+				} else {
+				}
 			}
 
 		} catch (FileNotFoundException e) {
